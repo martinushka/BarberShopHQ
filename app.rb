@@ -54,3 +54,8 @@ get '/barber/:id' do
 	# с помощью params обращаемся к параметру id
 	erb :barber
 end
+
+get '/bookings' do
+	@clients = Client.order('created_at DESC')
+	erb :bookings
+end

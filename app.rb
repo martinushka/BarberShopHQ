@@ -48,3 +48,9 @@ post '/visit' do
 	end
 
 end
+
+get '/barber/:id' do
+	@barber = Barber.find(params[:id])
+	# с помощью params обращаемся к параметру id
+	erb :barber
+end
